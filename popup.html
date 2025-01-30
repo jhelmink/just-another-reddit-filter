@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Just Another Reddit Filter</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        width: 250px;
+        /* height: 250px; */
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: 1.2rem;
+        color: #333;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 5px;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"] {
+        width: 85%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 0.9rem;
+      }
+
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 6px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      ul {
+        list-style: none;
+        width: 100%;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        text-align: left;
+      }
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        padding: 5px 10px;
+        border-bottom: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      .delete-btn {
+        color: #ff4d4d;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 2px 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Just Another Reddit Filter</h1>
+
+    <form id="keywordForm">
+      <input type="text" id="newKeyWord" placeholder="Add keyword" />
+      <button id="addToFilter" type="submit">+</button>
+    </form>
+
+    <ul id="savedKeyWords">
+      <!-- Saved keywords will be displayed here -->
+    </ul>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

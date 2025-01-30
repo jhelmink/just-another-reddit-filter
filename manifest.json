@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Just Another Reddit Filter",
+    "version": "0.1",
+    "description": "Filter your reddit feed by keywords",
+    "icons": {
+        "16": "jarf-logo.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.reddit.com/*"
+            ],
+            "js": [
+                "content-scripts.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_icon": "jarf-logo.png",
+        "default_popup": "popup.html",
+        "default_title": "Just Another Reddit Filter"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ]
+}
